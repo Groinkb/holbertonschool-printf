@@ -8,9 +8,8 @@ By undertaking this project, developers can gain a deeper understanding of the i
 It is important to note that the recoded printf function should adhere to the standard C library's behavior to ensure compatibility with existing code and maintain expected functionality for users. Testing and validation will be crucial to ensure the recoded function behaves correctly and efficiently across different platforms and use cases.
 
 ## Algorithm
-![DiamgramPrintF]
-
-![[printf-block-diagram.png]]
+![Diagram of Printf](https://github.com/[Groinkb]/holbertonschool-printf
+/blob/[branch]/image.jpg?raw=true)
 
 ## Usage
 
