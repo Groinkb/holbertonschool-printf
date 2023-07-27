@@ -1,27 +1,35 @@
-## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Authors](#authors)
+# PRINTF project
 
-## General info
-This project is PrintF in C language.
-	
-## Technologies
-Project is created with:
-* C99
-* Ipsum version: 2.33
-* Ament library version: 999
-	
-## Setup
-To run this project, install it locally using npm:
+The project of recoding the printf function in the C language involves rewriting the existing printf function from scratch. The printf function is responsible for formatted output and is widely used in C programming to display text and variables with specific formats.
 
-```
-$ cd ../lorem
-$ npm install
-$ npm start
+The project aims to recreate the functionality of the original printf function, implementing its core features, such as handling format specifiers (e.g., %d, %f, %s), precision, width, and flags (e.g., left-justification, zero-padding). Additionally, the recoded function should be able to handle a variable number of arguments, just like the original printf.
+
+By undertaking this project, developers can gain a deeper understanding of the inner workings of the printf function, enhance their C programming skills, and explore the complexities involved in handling various data types and formatting options.
+
+It is important to note that the recoded printf function should adhere to the standard C library's behavior to ensure compatibility with existing code and maintain expected functionality for users. Testing and validation will be crucial to ensure the recoded function behaves correctly and efficiently across different platforms and use cases.
+
+## Algorithm
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install foobar
 ```
 
-## Authors 
-Hocine Bouabdallah 
-Benjamin Marchal
+## Usage
+
+```c
+#include <stdio.h>
+
+int main() {
+  printf("Hello World!");
+  return 0;
+}
+```
+
+## Contributing
+* Hocine Bouabdallah
+* Benjamin Marchal
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
