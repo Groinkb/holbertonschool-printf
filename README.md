@@ -1,6 +1,22 @@
-Print-F Project
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
-Description :
-In C language, printf function is used to print output on the screen.  This function is a part of the C standard library “stdio.h” and it can allow formatting the output in numerous ways.
+## General info
+This project is simple Lorem ipsum dolor generator.
+	
+## Technologies
+Project is created with:
+* Lorem version: 12.3
+* Ipsum version: 2.33
+* Ament library version: 999
+	
+## Setup
+To run this project, install it locally using npm:
 
-Push folder and images.s
+```
+$ cd ../lorem
+$ npm install
+$ npm start
+```
