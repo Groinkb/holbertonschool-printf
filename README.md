@@ -1,35 +1,123 @@
-# PRINTF project
+<div align="center">
+    <h1>Print-F Project</h1>
+</div>
 
-The project of recoding the printf function in the C language involves rewriting the existing printf function from scratch. The printf function is responsible for formatted output and is widely used in C programming to display text and variables with specific formats.
-xThe project aims to recreate the functionality of the original printf function, implementing its core features, such as handling format specifiers (e.g., %d, %f, %s), precision, width, and flags (e.g., left-justification, zero-padding). Additionally, the recoded function should be able to handle a variable number of arguments, just like the original printf.
+![Holberton School Logo](https://techcrunch.com/wp-content/uploads/2015/11/holberton-logo-horizontal.jpg?w=680)
 
-By undertaking this project, developers can gain a deeper understanding of the inner workings of the printf function, enhance their C programming skills, and explore the complexities involved in handling various data types and formatting options.
+![UBUNTU](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+## Description
 
-It is important to note that the recoded printf function should adhere to the standard C library's behavior to ensure compatibility with existing code and maintain expected functionality for users. Testing and validation will be crucial to ensure the recoded function behaves correctly and efficiently across different platforms and use cases.
+This project is to recreate the printf function in C with its most important features, it was made in the software development program of [Holberton School](https://www.holbertonschool.fr/).
 
-## Algorithm
-![Workflow](https://github.com/Groinkb/holbertonschool-printf/blob/features/assets/images/printf-block-diagram.png)
+## Man page
 
-## Usage
-
-```c
-#include <stdio.h>
-
-int main() {
-  printf("Hello World!");
-  return 0;
-}
+The man page is a file wich explains in detail how the function works. If you want see a full explanation of this function you can run our man page this way:
+```
+$ man ./man_3_printf
 ```
 
 
+## Flowchart
+
+![Flowchart](https://github.com/RaphSchp/TEST/blob/master/Flowchart%20Template.jpg?raw=true)
+
+## Usage
+
+<details open>
+<summary> <strong> Syntaxis </strong> </summary>
+
+<br>
+
+```
+#include <stdio.h>
+#include <stdarg.h>
+
+int _printf(const char *format, ...);
+```
+
+- - -
+
+<details open>
+<summary> <strong> Compilation </strong> </summary>
+
+<br>
 
 
+$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
+ 
+ - - -
+ 
+<details open>
+<summary> <strong> Supported Conversion Specifiers </strong> </summary>
 
-## Contributing
+<br>
+
+* %c : Prints a character.
+* %s : Prints a string of characters.
+* %i & %d : Prints a signed integer in base 10.
+* %% : Prints a literal % character.
+
+</details>
+
+- - -
+
+## Utilisation Exemple
+
+```
+#include <stdio.h>
+
+int _printf(const char *format, ...);
+
+int main() 
+{
+    char ch = 'A';
+    char str[] = "Hello, World!";
+    int num = 42;
+
+    // Test of the %c specifier
+    _printf("Character: %c\n", ch);
+
+    // Test of the %s specifier
+    _printf("String: %s\n", str);
+
+    // Test of the %i specifier
+    _printf("Number: %i\n", num);
+
+    // Test of the %% specifier
+    _printf("Percent sign: %%\n");
+
+    // Test of multiple specifiers in the same string
+    _printf("Character: %c, String: %s, Number: %i\n", ch, str, num);
+
+    // Test with an empty string
+    _printf("Empty string: %s\n", "");
+
+    // Test with a null character (empty string)
+    char empty_str[] = {0};
+    _printf("Empty string: %s\n", empty_str);
+
+    return (0);
+}
+```
+Outpout :
+```
+Character: A
+String: Hello, World!
+Number: 42
+Percent sign: %
+Character: A, String: Hello, World!, Number: 42
+Empty string:
+Empty string:
+
+```
+
+
+## Authors :fist_right::fist_left:
+
 * Hocine Bouabdallah <a href="https://github.com/HB74C21" rel="nofollow"><img align="center" alt="github" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="24" /></a>
 * Benjamin Marchal <a href="https://github.com/Groinkb" rel="nofollow"><img align="center" alt="github" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="24" /></a>
-
+* C#21 BDX-THO <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rel="nofollow"><img align="center" alt="heart" src="https://vectorwiki.com/images/a2I5f__heart.svg" height="24" /></a>
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This program is distributed under the terms of the Holberton license.
