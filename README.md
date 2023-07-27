@@ -28,9 +28,8 @@ int main() {
 
 
 ## Contributing
-* Hocine Bouabdallah
-* Benjamin Marchal
-
+* Hocine Bouabdallah <a href="https://github.com/HB74C21" rel="nofollow"><img align="center" alt="github" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="24" /></a>
+* Benjamin Marchal <a href="https://github.com/Groinkb" rel="nofollow"><img align="center" alt="github" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="24" /></a>
 
 
 ## License
