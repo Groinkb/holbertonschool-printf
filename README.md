@@ -2,13 +2,14 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Authors](#authors)
 
 ## General info
-This project is simple Lorem ipsum dolor generator.
+This project is PrintF in C language.
 	
 ## Technologies
 Project is created with:
-* Lorem version: 12.3
+* C99
 * Ipsum version: 2.33
 * Ament library version: 999
 	
@@ -20,3 +21,7 @@ $ cd ../lorem
 $ npm install
 $ npm start
 ```
+
+## Authors 
+Hocine Bouabdallah 
+Benjamin Marchal
