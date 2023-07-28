@@ -1,0 +1,52 @@
+.\" Man page for _printf
+.\" Indicate the man page number (3)
+.TH _PRINTF 3 "July 25, 2023"
+.SH NAME
+_printf \- Custom function to print formatted data
+.SH SYNOPSIS
+.B #include <stdio.h>
+.PP
+.B int _printf(const char *format, ...);
+.SH DESCRIPTION
+The \fB_printf\fR function prints formatted data to the standard output (usually the terminal). It is similar to the \fBprintf\fR function in the C standard library, but with a custom implementation.
+.SH PARAMETERS
+\fBformat\fR : Format string specifying the layout of the data to be printed. Conversion specifiers start with the % character followed by a letter (%c, %s, %i, %d, %%).
+.SH SUPPORTED CONVERSION SPECIFIERS
+\fB%c\fR : Prints a character.
+.TP
+\fB%s\fR : Prints a string of characters.
+.TP
+\fB%i\fR, \fB%d\fR : Prints a signed integer in base 10.
+.TP
+\fB%%\fR : Prints a literal % character.
+.SH RETURN VALUE
+The number of characters written to the standard output is returned on success. In case of an error, the return value may vary depending on the implementation, but usually a negative value is returned.
+.SH EXAMPLES
+.B int main()
+{
+.TP
+  char ch = 'A';
+.TP
+  char str[] = "Hello, World!";
+.TP
+  int num = 42;
+.TP
+  _printf("Character: %c\\n", ch);
+.TP
+  _printf("String: %s\\n", str);
+.TP
+  _printf("Number: %i\\n", num);
+.TP
+  _printf("Integer: %d\\n", num);
+.TP
+  _printf("Percent sign: %%\\n");
+.TP
+  return 0;
+}
+.SH SEE ALSO
+\fBprintf\fR(3), \fBsprintf\fR(3), \fBfprintf\fR(3), \fBvprintf\fR(3), \fBstdarg\fR(3).
+.SH AUTHORS
+This manual was written by Gary Mirambet <6725@holbertonstudents.com> and Raphael Schopfer <6740@holbertonstudents.com>.
+.SH COPYRIGHT
+Copyright \(co 2023 Holberton School.
+This program is distributed under the terms of the Holberton license.
