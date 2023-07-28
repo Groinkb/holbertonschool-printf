@@ -1,90 +1,33 @@
-#include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
 
-/**
- * Custom putchar function that writes a character to the standard output (stdout).
- *
- * @param c The character to be written.
- * @return On success, the number of characters written is returned. On failure, -1 is returned.
- */
-int _putchar(char c)
-{
-	return write(1, &c, 1);
-}
-
-/**
- * Custom printf function that prints formatted output to the standard output (stdout).
- * It supports format specifiers: %d, %i, %s, %c, and %%
- *
- * @param format The format string containing the characters to print.
- * @param ... The optional arguments based on format specifiers.
- * @return The total number of characters printed.
- */
-int _printf(const char *format, ...)
+int percent(const char *format, ...)
 {
 	va_list args;
 	va_start(args, format);
 
-	const char *str;
 	int printed_chars = 0;
 
-	for (str = format; str && *str != '\0'; str++)
+	while (*format)
 	{
-		if (*str == '%')
+		if (*format == '%')
 		{
-			switch (*(str + 1))
+			format++;
+			if (*format == '%')
 			{
-			case 'd':
-			case 'i':
-			{
-				int value = va_arg(args, int);
-				char buffer[20];
-
-
-				snprintf(buffer, sizeof(buffer), "%d", value);
-				for (char *p = buffer; *p != '\0'; p++)
-				{
-					_putchar(*p);
-					printed_chars++;
-				}
-				break;
-			}
-			case 's':
-			{
-				char *value = va_arg(args, char *);
-				for (char *p = value; *p != '\0'; p++)
-				{
-					_putchar(*p);
-					printed_chars++;
-				}
-				break;
-			}
-			case 'c':
-			{
-				char value = (char)va_arg(args, int);
-				_putchar(value);
+				write(1, format, 1);
 				printed_chars++;
-				break;
 			}
-			case '%':
-				_putchar('%');
-				printed_chars++;
-				break;
-			default:
-				// Unsupported format specifier, ignore it.
-				break;
-			}
-			str++;
 		}
 		else
 		{
-			_putchar(*str);
+			write(1, format, 1);
 			printed_chars++;
 		}
+		format++;
 	}
 
 	va_end(args);
 
 	return printed_chars;
-}
+	}
