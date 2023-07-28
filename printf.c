@@ -17,7 +17,7 @@ int _putchar(char c)
 /**
  * _printf - Print formatted output with variable arguments.
  *
- * This function prints formatted output with variable arguments. It supports
+ * This function prints formatted output with variable arguments. It supportss
  * replacing '%d' or '%i' with an integer value, '%s' with a null-terminated string,
  * '%c' with a character, and '%%' with a literal '%'.
  *
