@@ -1,19 +1,17 @@
-#ifndef MAIN_H_
-#define MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
 
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
-#include <stdlib.h>
 
-typedef struct print
-{
-    char *type;
-    int(*f)(va_list arg);
-} print_t;
-
+int _putchar(char c);
+int c (const char *format, ...);
+int d (const char *format, ...);
+int i (const char *format, ...);
+int s (const char *format, ...);
+int percent(const char *format, ...);
 int _printf(const char *format, ...);
-int _printf_char(va_list ap);
-int _printf_string(va_list ap);
-int _printf_percent(va_list ap);
 
 #endif
