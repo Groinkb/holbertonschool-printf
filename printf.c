@@ -2,29 +2,11 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-/**
- * _putchar - Write a character to the standard output (file descriptor 1).
- *
- * @c: The character to be written.
- *
- * Return: On success, 1 is returned. On error, -1 is returned, and errno is set appropriately.
- */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	return write(1, &c, 1);
 }
 
-/**
- * _printf - Print formatted output with variable arguments.
- *
- * This function prints formatted output with variable arguments. It supports
- * replacing '%d' or '%i' with an integer value, '%s' with a null-terminated string,
- * '%c' with a character, and '%%' with a literal '%'.
- *
- * @format: The formatted string to print.
- *
- * Return: The number of characters printed (excluding the null terminator).
- */
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -83,5 +65,5 @@ int _printf(const char *format, ...)
 
 	va_end(args);
 
-	return (printed_chars);
+	return printed_chars;
 }

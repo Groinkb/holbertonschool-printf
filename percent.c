@@ -1,15 +1,6 @@
 #include "main.h"
-
-/**
- * percent - Print a formatted string with '%' handling.
- *
- * This function prints a formatted string with '%' handling. It is similar to
- * the printf function, but only supports printing '%' character as a literal.
- *
- * @format: The formatted string to print.
- *
- * Return: The number of characters printed (excluding the null terminator).
- */
+#include <unistd.h>
+#include <stdarg.h>
 
 int percent(const char *format, ...)
 {
@@ -24,13 +15,13 @@ int percent(const char *format, ...)
 			format++;
 			if (*format == '%')
 			{
-				write(1, format, 1);
+				_putchar('%');
 				printed_chars++;
 			}
 		}
 		else
 		{
-			write(1, format, 1);
+			_putchar(*format);
 			printed_chars++;
 		}
 		format++;

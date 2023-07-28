@@ -2,16 +2,6 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-/**
- * integer - Print a formatted output with integer substitution.
- *
- * This function prints a formatted output with integer substitution. It supports
- * replacing '%i' with an integer value and handles both positive and negative numbers.
- *
- * @format: The formatted string to print.
- *
- * Return: The number of characters printed (excluding the null terminator).
- */
 int integer(const char *format, ...)
 {
 	va_list args;
@@ -69,5 +59,5 @@ int integer(const char *format, ...)
 
 	va_end(args);
 
-	return (printed_chars);
+	return printed_chars;
 }
