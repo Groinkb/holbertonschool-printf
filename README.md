@@ -116,7 +116,7 @@ Empty string:
 
 * Hocine Bouabdallah <a href="https://github.com/HB74C21" rel="nofollow"><img align="center" alt="github" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="24" /></a>
 * Benjamin Marchal <a href="https://github.com/Groinkb" rel="nofollow"><img align="center" alt="github" src="https://www.vectorlogo.zone/logos/github/github-tile.svg" height="24" /></a>
-* C#21 BDX-THO <a href="https://www.youtube.com/watch?v=vev5icVBU2g" rel="nofollow"><img align="center" alt="heart" src="https://vectorwiki.com/images/a2I5f__heart.svg" height="24" /></a>
+* C#21 BDX-THO <a href="https://www.youtube.com/watch?v=vppD0bg0ZwA" rel="nofollow"><img align="center" alt="heart" src="https://vectorwiki.com/images/a2I5f__heart.svg" height="24" /></a>
 
 ## License
 
