@@ -1,9 +1,12 @@
+#include "main.h"
+#include <stdarg.h>
+#include <unistd.h>
+
 /**
  * Custom putchar function that writes a character to the standard output (stdout).
  *
  * @param c The character to be written.
- * @return On success, the number of characters written is returned. 
- * On failure, -1 is returned.
+ * @return On success, the number of characters written is returned. On failure, -1 is returned.
  */
 int _putchar(char c)
 {
