@@ -3,20 +3,23 @@
 #include <unistd.h>
 #include <stdio.h>
 
-/*
- * d - function to print formatted output
- * @format: format string
- * ...
- * Return: number of characters printed
+/**
+ * decimal - Print formatted output with integer substitution.
+ *
+ * This function prints formatted output with integer substitution. It supports
+ * printing '%' character as a literal and replacing '%d' with an integer value.
+ *
+ * @format: The formatted string to print.
+ *
+ * Return: The number of characters printed (excluding the null terminator).
  */
-int d(const char *format, ...)
+
+int decimal(const char *format, ...)
 {
 	int printed_chars = 0;
 	va_list args;
 	const char *str;
-	char buffer[20];
 	char *p;
-	int num;
 
 	va_start(args, format);
 
@@ -30,29 +33,24 @@ int d(const char *format, ...)
 				printed_chars++;
 				str++;
 			}
-
 			else if (*(str + 1) == 'd')
 			{
-				num = va_arg(args, int);
+				int num = va_arg(args, int);
+				char buffer[20];
 				snprintf(buffer, sizeof(buffer), "%d", num);
-				p = buffer;
-
-				while (*p != '\0')
+				for (p = buffer; *p != '\0'; p++)
 				{
 					_putchar(*p);
 					printed_chars++;
-					p++;
 				}
 				str++;
 			}
-
 			else
 			{
 				_putchar(*str);
 				printed_chars++;
 			}
 		}
-
 		else
 		{
 			_putchar(*str);
@@ -62,5 +60,5 @@ int d(const char *format, ...)
 
 	va_end(args);
 
-	return (printed_char)s;
+	return (printed_chars);
 }
