@@ -1,6 +1,17 @@
 #include <unistd.h>
 #include <stdarg.h>
 
+/**
+ * characters - Print characters from a formatted string.
+ *
+ * This function prints characters from a formatted string. It takes a variable
+ * number of arguments and supports printing individual characters using the
+ * format specifier '%c'.
+ *
+ * @format: The formatted string to print.
+ *
+ * Return: The number of characters printed (excluding the null terminator).
+ */
 int characters(const char *format, ...)
 {
 	int printed_chars = 0;
@@ -28,5 +39,5 @@ int characters(const char *format, ...)
 	}
 
 	va_end(args);
-	return printed_chars;
+	return (printed_chars);
 }
