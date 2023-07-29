@@ -19,22 +19,25 @@
  *       is negative, it will be printed with a leading '+' sign. The function is mainly
  *       intended for demonstration purposes or when advanced formatting is not required.
  */
-
-
 int integer(const char *format, ...)
 {
 	va_list args;
 	const char *str;
 	int printed_chars = 0;
-	int i, j;
 
 	va_start(args, format);
 
-	for (str = format; str && *str != '\0'; str++)
+	while (*format)
 	{
-		if (*str == '%')
+		if (*format == '%')
 		{
-			if (*(str + 1) == 'i')
+			format++;
+			if (*format == '%')
+			{
+				_putchar('%');
+				printed_chars++;
+			}
+			else if (*format == 'i')
 			{
 				int num = va_arg(args, int);
 				int num_len = 1;
@@ -50,33 +53,34 @@ int integer(const char *format, ...)
 
 				if (num < 0)
 				{
-					printed_chars += _putchar('+');
+					_putchar('+');
 					num *= -1;
 				}
-				for (i = 0; i < num_len; i++)
+
+				for (int i = 0; i < num_len; i++)
 				{
 					int divisor = 1;
 					int digit;
-					for (j = 0; j < num_len - i - 1; j++)
+					for (int j = 0; j < num_len - i - 1; j++)
 						divisor *= 10;
 					digit = num / divisor;
 					num %= divisor;
 					printed_chars += _putchar('0' + digit);
 				}
-				str++;
+				format++;
 			}
 			else
 			{
-				printed_chars += _putchar(*str);
+				printed_chars += _putchar(*format);
 			}
 		}
 		else
 		{
-			printed_chars += _putchar(*str);
+			printed_chars += _putchar(*format);
 		}
+		format++;
 	}
 
 	va_end(args);
-
 	return printed_chars;
 }
