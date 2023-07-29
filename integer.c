@@ -18,6 +18,24 @@
  *       is negative, it will be printed with a leading '+' sign. The function is mainly
  *       intended for demonstration purposes or when advanced formatting is not required.
  */
+
+/**
+ * integer - Custom print function that prints formatted output to the standard output,
+ *           supporting the %i format specifier for integers.
+ *
+ * @format: A pointer to a format string containing the text to be printed, along with
+ *          optional format specifiers.
+ * @...   : Variable arguments list, corresponding to the format specifiers in the
+ *          format string. Currently, only integers are supported (%i).
+ *
+ * Return: The number of characters printed to the standard output.
+ *
+ * Note: This function behaves similarly to printf, but with limited functionality. It
+ *       supports the %i format specifier for printing integers. The function calculates
+ *       the number of digits in the integer and prints it digit by digit. If the integer
+ *       is negative, it will be printed with a leading '+' sign. The function is mainly
+ *       intended for demonstration purposes or when advanced formatting is not required.
+ */
 int integer(const char *format, ...)
 {
 	va_list args;
@@ -75,3 +93,11 @@ int integer(const char *format, ...)
 		}
 		else
 		{
+			printed_chars += _putchar(*format);
+		}
+		format++;
+	}
+
+	va_end(args);
+	return printed_chars;
+}
