@@ -1,8 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
-
-
 /**
  * integer - Custom print function that prints formatted output to the standard output,
  *           supporting the %i format specifier for integers.
