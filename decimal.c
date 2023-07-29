@@ -3,20 +3,26 @@
 #include <unistd.h>
 #include <stdio.h>
 
-/*
- * This function prints formatted output to the standard output, similar to printf,
- * but only supports the %d format specifier for integers. It takes a format string
- * and a variable number of arguments and prints the formatted output to the console.
+/**
+ * decimal - Custom print function that prints formatted output to the standard output,
+ *           supporting the %d format specifier for integers.
  *
- * Parameters:
- *   format: A pointer to a format string containing the text to be printed, along with
- *           optional format specifiers.
- *   ...   : Variable arguments list, corresponding to the format specifiers in the
- *           format string. Currently, only integers are supported (%d).
+ * @format: A pointer to a format string containing the text to be printed, along with
+ *          optional format specifiers.
+ * @...   : Variable arguments list, corresponding to the format specifiers in the
+ *          format string. Currently, only integers are supported (%d).
  *
- * Returns:
- *   The number of characters printed to the standard output.
+ * Return: The number of characters printed to the standard output.
+ *
+ * Note: This function should be used with care and not as a replacement for the standard
+ *       printf function, as it has limited functionality and only supports a subset of
+ *       format specifiers. It is mainly intended for demonstration purposes or when
+ *       advanced formatting is not required.
  */
+int decimal(const char *format, ...)
+{
+	// Function implementation...
+}
 
 int decimal(const char *format, ...)
 {
