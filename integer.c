@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stdarg.h>
 #include <unistd.h>
-
 /**
  * integer - Custom print function that prints formatted output to the standard output,
  *           supporting the %i format specifier for integers.
@@ -22,7 +21,6 @@
 int integer(const char *format, ...)
 {
 	va_list args;
-	const char *str;
 	int printed_chars = 0;
 
 	va_start(args, format);
@@ -42,6 +40,7 @@ int integer(const char *format, ...)
 				int num = va_arg(args, int);
 				int num_len = 1;
 				int temp = num;
+				int i, j;
 
 				if (num < 0)
 				{
@@ -57,11 +56,11 @@ int integer(const char *format, ...)
 					num *= -1;
 				}
 
-				for (int i = 0; i < num_len; i++)
+				for (i = 0; i < num_len; i++)
 				{
 					int divisor = 1;
 					int digit;
-					for (int j = 0; j < num_len - i - 1; j++)
+					for (j = 0; j < num_len - i - 1; j++)
 						divisor *= 10;
 					digit = num / divisor;
 					num %= divisor;
@@ -76,11 +75,3 @@ int integer(const char *format, ...)
 		}
 		else
 		{
-			printed_chars += _putchar(*format);
-		}
-		format++;
-	}
-
-	va_end(args);
-	return printed_chars;
-}
