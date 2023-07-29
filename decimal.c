@@ -19,10 +19,6 @@
  *       format specifiers. It is mainly intended for demonstration purposes or when
  *       advanced formatting is not required.
  */
-int decimal(const char *format, ...)
-{
-	// Function implementation...
-}
 
 int decimal(const char *format, ...)
 {
